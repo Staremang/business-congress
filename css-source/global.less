@@ -349,6 +349,55 @@ td {
 		margin-top: 106px;
 	}
 }
+.section-hero-title {
+	width: 943px;
+	background: url(../img/title-back.svg) top center no-repeat;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	&__long {
+		font-size: 61px;
+		vertical-align: middle;
+	}
+	&__first-stroke {
+		line-height: 100px;
+		height: 118px;
+		padding: 15px 15px 3px;
+	}
+	&__second-stroke {
+		margin-top: -20px;
+	}
+	&__info {
+		font-size: 28px;
+		font-weight: @font-medium;
+		margin-left: -134px;
+		margin-top: 27px;
+		
+		> * {
+			line-height: 66px;
+		}
+	}
+	&__city {
+//		line-height: 66px;
+		display: inline-block;
+	}
+	&__pos {
+		display: inline-block;
+	}
+	&__date {
+		display: inline-block;
+		margin: 0 30px;
+		padding: 0px 39px;
+		border-left: 1px solid white;
+		border-right: 1px solid white;
+	}
+}
 .section-about {
 	background-image: url(../img/back-section-about.jpg);
 }
@@ -377,7 +426,7 @@ td {
 		margin-bottom: 30px;
 		td {
 			vertical-align: middle;
-			font-weight: @font-ultralight;
+			font-weight: @font-light;
 			line-height: 22px;
 			text-align: left;
 	//		text-align: center;
@@ -485,7 +534,7 @@ td {
 			margin: 0;
 			font-size: 14px;
 			line-height: 18px;
-			font-weight: @font-thin;
+			font-weight: @font-light;
 		}
 	}
 }

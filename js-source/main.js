@@ -21,8 +21,8 @@ if (typeof(ymaps) !== "undefined") {
 
 $(document).ready(function () {
 	$('.popup').hide();
-	$('[data-popup="btn"]').click(function () {
-		$('.popup').fadeIn();
+	$('[data-popup-btn]').click(function () {
+		$('[data-popup="' + $(this).attr('data-popup-btn') + '"]').fadeIn();
 	})
 	$('.popup').click(function (e) {
 		if ($(e.target).hasClass('popup')) {

@@ -26,7 +26,7 @@
 			</div>
 			<div class="header-contacts">
 				<div class="header-contacts__number">8 (423) 245 98 26</div>
-				<button class="header-contacts__btn">ЗАКАЗАТЬ ЗВОНОК</button>
+				<button data-popup-btn="call" class="header-contacts__btn">ЗАКАЗАТЬ ЗВОНОК</button>
 			</div>
 		</div>
 	</header>
@@ -36,10 +36,19 @@
 				<div class="logo">
 					<img src="img/logo.png" alt="">
 				</div>
-				<div class="section-hero__info">
-					<img src="img/info.png" alt="">
+				<div class="section-hero__info section-hero-title">
+					<div class="section-hero-title__first-stroke">
+						<span class="section-hero-title__long">VI</span>
+						<span>МЕЖДУНАРОДНЫЙ ЭКОНОМИЧЕСКИЙ</span>
+					</div>
+					<div class="section-hero-title__second-stroke">БИЗНЕС-КОНГРЕСС</div>
+					<div class="section-hero-title__info">
+						<span class="section-hero-title__city">Владивосток</span>
+						<span class="section-hero-title__date">21-22 СЕНТЯБРЯ 2017</span>
+						<span class="section-hero-title__pos">Двфу</span>
+					</div>
 				</div>
-				<button data-popup="btn" class="btn section-hero__btn">Регистрация</button>
+				<button data-popup-btn="registration" class="btn section-hero__btn">Регистрация</button>
 			</div>
 			<button data-anchor="#about" class="section__btn"></button>
 		</div>
@@ -340,7 +349,7 @@
 						</td>
 					</tr>
 				</table>
-				<div data-popup="btn" class="btn price__btn">ПРИНЯТЬ УЧАСТИЕ</div>
+				<div data-popup-btn="registration" class="btn price__btn">ПРИНЯТЬ УЧАСТИЕ</div>
 				<div class="price__note">*Аккредитация обязательна</div>
 			</div>
 		</div>
@@ -374,10 +383,12 @@
 			</div>
 			<div class="partners-slider owl-carousel">
 				<div class="partners">
+<!--				Можно сделать так: -->
 					<div class="partners__stroke">
 						<div class="partners-container">
 							<div class="partners-container__title">Официальный партнер</div>
 							<div class="partners-container__logotypes">
+<!--							Вот тут изображения должны быть обязательно высотой 140px-->
 								<a href="#"><img src="img/1.png" alt=""></a>
 							</div>
 						</div>
@@ -399,7 +410,9 @@
 							</div>
 						</div>
 					</div>
+<!--				Но лучше так: -->
 					<div class="partners__stroke">
+<!--					Тут изображения должны быть обязательно высотой 189px-->
 						<img src="img/partners-stroke-2.png" alt="">
 					</div>
 					<div class="partners__stroke">
@@ -481,7 +494,7 @@
 		</div>
 -->
 	</footer>
-	<div class="popup" style="display: none">
+	<div class="popup" data-popup="registration" style="display: none">
 		<div class="popup__container">
 			<h1 class="popup__title">быстрая регистрация</h1>
 			<form action="" class="form">
@@ -499,6 +512,24 @@
 				</div>
 				<div class="form__group">
 					<button class="form__btn" type="submit">Перезвонить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="popup" data-popup="call" style="display: none">
+		<div class="popup__container">
+			<h1 class="popup__title">Заказать звонок</h1>
+			<form action="" class="form">
+				<div class="form__group">
+					<label class="form__label" for="name">Имя:</label>
+					<input class="form__input" id="name" type="text">
+				</div>
+				<div class="form__group">
+					<label class="form__label" for="tel">Телефон:</label>
+					<input class="form__input" id="tel" type="tel">
+				</div>
+				<div class="form__group">
+					<button class="form__btn" type="submit">Позвонить мне</button>
 				</div>
 			</form>
 		</div>
