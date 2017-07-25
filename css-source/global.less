@@ -708,41 +708,93 @@ td {
 //	}
 }
 .form {
-	margin: 50px 0;
-	text-align: center;
+//	margin: 50px 0;
+//	text-align: center;
+    width: 326px;
 	&__group {
-		margin: 20px 0;
+        margin-bottom: 10px;
 	}
-	&__label {
-		text-transform: uppercase;
-//		width: 200px;
-		display: block;
-		margin-bottom: 10px;
-//		margin-top: 10px;
-	}
-	&__input {
+    
+/*
+     &__label {
+            text-transform: uppercase;
+    //		width: 200px;
+            display: block;
+            margin-bottom: 10px;
+    //		margin-top: 10px;
+        }
+*/
+    &__input {
 		width: 250px;
 		padding: 5px 10px;
+        
+        
+        display: block;
+        width: 100%;
+        padding: 10px 18px;
+        font-size: 12px;
+        line-height: 1.25;
+        color: #464a4c;
+        border: 1px solid #d4d4d4;
+        
+        &::-webkit-input-placeholder {
+            color: #636c72;
+            opacity: 1;
+            text-transform: uppercase; 
+        }
+        &::-moz-placeholder {
+            color: #636c72;
+            opacity: 1;
+            text-transform: uppercase; 
+        }
+        &:-moz-placeholder {
+            color: #636c72;
+            opacity: 1;
+            text-transform: uppercase; 
+        }
+        &:-ms-input-placeholder {
+            color: #636c72;
+            opacity: 1;
+            text-transform: uppercase; 
+        }
 	}
 	
 	&__btn {
-		background: white;
-		border: 0;
-		padding: 8px 10px;
-		font-size: 14px;
-		color: black;
-		width: 200px;
-		display: block;
-		font-weight: @font-medium;
-		cursor: pointer;
-		text-transform: uppercase;
-		left: 0;
-		right: 0;
-		margin: 30px auto 0;
-		&:hover {
-			background: #e0dfdf;
-		}
+        display: block;
+        width: 100%;
+		background: #bf2525;
+//        text-transform: uppercase;
+//        color: white;
+        line-height: 1.25;
+//        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        user-select: none;
+//        cursor: pointer;
+//        border: 0;
+        border-radius: 0;
+        padding: 21px 14px;
+        font-size: 18px;
+        box-shadow: 0 5px 0 #5f1111;
 	}
+//	&__btn {
+//		background: white;
+//		border: 0;
+//		padding: 8px 10px;
+//		font-size: 14px;
+//		color: black;
+//		width: 200px;
+//		display: block;
+//		font-weight: @font-medium;
+//		cursor: pointer;
+//		text-transform: uppercase;
+//		left: 0;
+//		right: 0;
+//		margin: 30px auto 0;
+//		&:hover {
+//			background: #e0dfdf;
+//		}
+//	}
 }
 .popup {
 	background: rgba(0, 0, 0, 0.5);
@@ -752,31 +804,71 @@ td {
 	left: 0;
 	top: 0;
 	z-index: 150;
+    text-align: center;
+    
 	&__container {
-		background: #b72934;
-		max-width: 600px;
+        display: inline-block;
+		background: #efefef;
+		max-height: 90vh;
+		max-width: 760px;
+        
+//		background: #b72934;
+//		max-width: 600px;
 		left: 0;
 		right: 0;
 		margin: 100px auto;
-		padding: 20px 40px;
+        text-align: left;
+//		padding: 20px 40px;
+//		color: white; 
+	}
+    &__block {
+        padding: 11px 16px 20px;
+        overflow: auto;
+    }
+	&__header {
+		background: #b62c2c;
 		color: white;
-	}
-	&__title {
-		text-transform: uppercase;
-		text-align: center;
+		padding: 17px 45px 15px 16px;
 		position: relative;
-		&:after {
-			content: '';
-			display: block;
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: -9px;
-			margin: auto;
-			width: 5px;
-			height: 5px;
-			background: white;
-			box-shadow: -10px 0 0 0 white, 10px 0 0 0 white
-		}
+		height: 50px;
 	}
+    
+	&__title {
+		font-size: 16px;
+        line-height: 18px;
+        font-weight: @font-medium;
+		text-transform: uppercase;
+		margin: 0;
+	}
+    
+	&__btn-close {
+		background: data-uri("image/svg+xml;charset=utf8", "../../img/not-used/close.svg") no-repeat center;
+		border: 0;
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		cursor: pointer;
+		
+		position: absolute;
+		top: 9px;
+		right: 13px;
+	} 
+//	&__title {
+//		text-transform: uppercase;
+//		text-align: center;
+//		position: relative;
+//		&:after {
+//			content: '';
+//			display: block;
+//			position: absolute;
+//			left: 0;
+//			right: 0;
+//			bottom: -9px;
+//			margin: auto;
+//			width: 5px;
+//			height: 5px;
+//			background: white;
+//			box-shadow: -10px 0 0 0 white, 10px 0 0 0 white
+//		}
+//	}
 }

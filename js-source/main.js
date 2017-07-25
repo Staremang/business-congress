@@ -23,12 +23,18 @@ $(document).ready(function () {
 	$('.popup').hide();
 	$('[data-popup-btn]').click(function () {
 		$('[data-popup="' + $(this).attr('data-popup-btn') + '"]').fadeIn();
+		$('body').css('overflow', 'hidden');
 	})
 	$('.popup').click(function (e) {
 		if ($(e.target).hasClass('popup')) {
 			$(this).fadeOut();
+            $('body').css('overflow', '');
 		}
 	})
+	$(".popup__btn-close").click(function() {
+		$(this).parents(".popup").fadeOut();
+		$('body').css('overflow', '');
+	});
 	$('.menu__item').click(function (e) {
 		e.preventDefault();
 		$('html, body').animate({scrollTop: $($(this).attr('href')).offset().top - 100}, 'slow');

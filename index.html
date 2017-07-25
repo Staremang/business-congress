@@ -496,42 +496,49 @@
 	</footer>
 	<div class="popup" data-popup="registration" style="display: none">
 		<div class="popup__container">
-			<h1 class="popup__title">быстрая регистрация</h1>
-			<form action="" class="form">
-				<div class="form__group">
-					<label class="form__label" for="name">Имя:</label>
-					<input class="form__input" id="name" type="text">
-				</div>
-				<div class="form__group">
-					<label class="form__label" for="tel">Телефон:</label>
-					<input class="form__input" id="tel" type="tel">
-				</div>
-				<div class="form__group">
-					<label class="form__label" for="email">E-mail:</label>
-					<input class="form__input" id="email" type="email">
-				</div>
-				<div class="form__group">
-					<button class="form__btn" type="submit">Перезвонить</button>
-				</div>
-			</form>
+            <div class="popup__header">
+                <h4 class="popup__title">регистрация</h4>
+				<button class="popup__btn-close"></button>
+            </div>
+			<div class="popup__block">
+                <form action="" class="form">
+                    <div class="form__group">
+                        <input class="form__input" id="name" type="text" placeholder="Ф.И.О">
+                    </div>
+                    <div class="form__group">
+                        <input class="form__input" id="pos" type="text" placeholder="Должность">
+                    </div>
+                    <div class="form__group">
+                        <input class="form__input" id="org" type="text" placeholder="Организация">
+                    </div>
+                    <div class="form__group">
+                        <input class="form__input" id="tel" type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="form__group">
+                        <input class="form__input" id="email" type="email" placeholder="Почта">
+                    </div>
+                    <button class="btn form__btn" type="submit">Принять участие</button>
+                </form>
+            </div>
 		</div>
 	</div>
 	<div class="popup" data-popup="call" style="display: none">
 		<div class="popup__container">
-			<h1 class="popup__title">Заказать звонок</h1>
-			<form action="" class="form">
-				<div class="form__group">
-					<label class="form__label" for="name">Имя:</label>
-					<input class="form__input" id="name" type="text">
-				</div>
-				<div class="form__group">
-					<label class="form__label" for="tel">Телефон:</label>
-					<input class="form__input" id="tel" type="tel">
-				</div>
-				<div class="form__group">
-					<button class="form__btn" type="submit">Позвонить мне</button>
-				</div>
-			</form>
+            <div class="popup__header">
+                <h4 class="popup__title">Заказать звонок</h4>
+				<button class="popup__btn-close"></button>
+            </div>
+			<div class="popup__block">
+                <form action="" class="form">
+                    <div class="form__group">
+                        <input class="form__input" id="name" type="text" placeholder="Имя">
+                    </div>
+                    <div class="form__group">
+                        <input class="form__input" id="tel" type="tel" placeholder="Телефон">
+                    </div>
+                    <button class="btn form__btn" type="submit">Позвонить мне</button>
+                </form>
+            </div>
 		</div>
 	</div>
 <!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
